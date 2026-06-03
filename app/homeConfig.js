@@ -2,46 +2,35 @@ const config = {
   // BASIC INFO
   phone: "YOUR PHONE NUMBER",
   email: "YOUR EMAIL",
-  logoUrl: "", // paste image link or upload later
+  logoUrl: "",
   businessName: "YOUR BUSINESS NAME",
   buttonName: "Call Now",
 
-  font: "Arial",
-  primaryColor: "#111111",
-  secondaryColor: "#cccccc",
+  // STYLE (TAILWIND FRIENDLY)
+  font: "font-sans",
+  primaryColor: "blue-600",
+  secondaryColor: "gray-200",
 
-  // ABOUT
-  slogan: "YOUR SLOGAN HERE",
-  companyStory: "Write your company story here...",
-  mission: "Your mission statement...",
+  // HERO / ABOUT
+  slogan: "Your Slogan Here",
+  companyStory: "Your company story goes here...",
+  mission: "Your mission goes here...",
   whyChooseUs: "Why customers should choose you...",
 
   // MEDIA
   images: [
-    "https://via.placeholder.com/300",
-    "https://via.placeholder.com/300",
-    "https://via.placeholder.com/300",
+    "https://via.placeholder.com/400",
+    "https://via.placeholder.com/400",
+    "https://via.placeholder.com/400",
   ],
 
-  video: "", // optional
+  video: "",
 
   // TESTIMONIALS
   testimonials: [
-    {
-      name: "John Doe",
-      stars: 5,
-      review: "Amazing service!",
-    },
-    {
-      name: "Jane Smith",
-      stars: 5,
-      review: "Highly recommend!",
-    },
-    {
-      name: "Mike",
-      stars: 4,
-      review: "Great experience.",
-    },
+    { name: "John", stars: 5, review: "Amazing service!" },
+    { name: "Sarah", stars: 5, review: "Highly recommend!" },
+    { name: "Mike", stars: 4, review: "Great experience!" },
   ],
 
   googleReviewsLink: "",
