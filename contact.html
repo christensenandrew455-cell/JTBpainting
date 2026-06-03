@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Contact Us</title>
+
+<link rel="stylesheet" href="styles.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<script src="config.js"></script>
+
+</head>
+
+<body>
+
+<header class="header">
+
+<div class="container header-content">
+
+<div class="logo-area">
+
+<img id="contactLogo" src="" alt="Logo">
+
+<h2 id="contactBusinessName"></h2>
+
+</div>
+
+<a href="index.html" class="btn-primary">
+
+Back Home
+
+</a>
+
+</div>
+
+</header>
+
+<section class="contact-page">
+
+<div class="container">
+
+<h1 id="contactTitle">
+Get A Free Quote
+</h1>
+
+<p class="contact-subtitle">
+
+Fill out the form below and we'll
+get back to you shortly.
+
+</p>
+
+<form id="quoteForm">
+
+<div class="form-grid">
+
+<input
+type="text"
+name="firstName"
+placeholder="First Name"
+required>
+
+<input
+type="text"
+name="lastName"
+placeholder="Last Name"
+required>
+
+</div>
+
+<input
+type="text"
+name="contactMethod"
+placeholder="Phone Number or Email"
+required>
+
+<input
+type="text"
+name="address"
+placeholder="Address">
+
+<input
+type="text"
+name="projectSize"
+placeholder="Project Size">
+
+<input
+type="date"
+name="date">
+
+<textarea
+name="message"
+placeholder="Tell us about your project..."
+rows="6"></textarea>
+
+<button
+type="submit"
+class="btn-primary">
+
+Submit Request
+
+</button>
+
+</form>
+
+<div id="statusMessage"></div>
+
+</div>
+
+</section>
+
+<footer>
+
+<div class="container">
+
+<div id="contactFooter"></div>
+
+</div>
+
+</footer>
+
+<script src="contact.js"></script>
+
+</body>
+</html>
