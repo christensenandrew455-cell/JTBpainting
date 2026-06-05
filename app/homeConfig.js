@@ -1,17 +1,22 @@
 const config = {
-  // BASIC INFO
+  // BUSINESS INFO
+  businessName: "YOUR BUSINESS NAME",
   phone: "YOUR PHONE NUMBER",
   email: "YOUR EMAIL",
-  logoUrl: "",
-  businessName: "YOUR BUSINESS NAME",
-  buttonName: "Call Now",
 
-  // STYLE (TAILWIND FRIENDLY)
+  // BRANDING
+  logoUrl: "",
+
+  // BUTTONS
+  callButtonText: "Call Now",
+  contactButtonText: "Contact Us",
+
+  // STYLE
   font: "font-sans",
   primaryColor: "blue-600",
   secondaryColor: "gray-200",
 
-  // HERO / ABOUT
+  // HERO
   slogan: "Your Slogan Here",
   companyStory: "Your company story goes here...",
   mission: "Your mission goes here...",
@@ -28,12 +33,24 @@ const config = {
 
   // TESTIMONIALS
   testimonials: [
-    { name: "John", stars: 5, review: "Amazing service!" },
-    { name: "Sarah", stars: 5, review: "Highly recommend!" },
-    { name: "Mike", stars: 4, review: "Great experience!" },
+    {
+      name: "John",
+      stars: 5,
+      review: "Amazing service!",
+    },
+    {
+      name: "Sarah",
+      stars: 5,
+      review: "Highly recommend!",
+    },
+    {
+      name: "Mike",
+      stars: 4,
+      review: "Great experience!",
+    },
   ],
 
-  googleReviewsLink: "hey man",
+  googleReviewsLink: "",
 };
 
 export default config;
