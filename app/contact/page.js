@@ -2,9 +2,44 @@
 
 import { useState } from "react";
 import config from "./contactConfig";
+import siteConfig from "../siteConfig";
 
 export default function ContactPage() {
-  const [form, setForm] = useState({
+const [form, setForm] = useState({
+firstName: "",
+lastName: "",
+contact: "",
+address: "",
+size: "",
+date: "",
+message: "",
+});
+
+const handleChange = (e) => {
+setForm({
+...form,
+[e.target.name]: e.target.value,
+});
+};
+
+const handleSubmit = async (e) => {
+e.preventDefault();
+
+```
+const res = await fetch("/api/contact", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify(form),
+});
+
+const data = await res.json();
+
+if (data.success) {
+  alert("Message sent successfully!");
+
+  setForm({
     firstName: "",
     lastName: "",
     contact: "",
@@ -13,132 +48,130 @@ export default function ContactPage() {
     date: "",
     message: "",
   });
+} else {
+  alert("Something went wrong.");
+}
+```
 
-  const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
+};
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+return (
+<main
+className={`         ${config.font}
+        text-gray-900
+        ${siteConfig.pagePadding}
+        ${
+          siteConfig.contentAlignment === "center"
+            ? "text-center"
+            : "text-left"
+        }
+      `}
+>
+<div className={`mx-auto ${siteConfig.maxWidth}`}>
+{/* HEADER */} <header className="mb-10"> <h1 className="text-4xl font-bold">
+{config.pageTitle} </h1>
 
-    const res = await fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(form),
-    });
+```
+      <p className="text-gray-600 mt-2">
+        {config.subtitle}
+      </p>
+    </header>
 
-    const data = await res.json();
+    {/* CONTACT INFO */}
+    <section className="mb-10 space-y-2">
+      <h2 className="text-2xl font-semibold">
+        Contact Details
+      </h2>
 
-    if (data.success) {
-      alert("Message sent successfully!");
-      setForm({
-        firstName: "",
-        lastName: "",
-        contact: "",
-        address: "",
-        size: "",
-        date: "",
-        message: "",
-      });
-    } else {
-      alert("Something went wrong.");
-    }
-  };
+      <p>📞 {config.phone}</p>
+      <p>📧 {config.email}</p>
 
-  return (
-    <main className={`${config.font} text-gray-900 p-6 md:p-12`}>
+      {config.address && (
+        <p>📍 {config.address}</p>
+      )}
+    </section>
 
-      {/* HEADER */}
-      <header className="mb-10">
-        <h1 className="text-4xl font-bold">{config.pageTitle}</h1>
-        <p className="text-gray-600 mt-2">{config.subtitle}</p>
-      </header>
+    {/* FORM */}
+    <section>
+      <h2 className="text-2xl font-semibold mb-4">
+        Send a Message
+      </h2>
 
-      {/* CONTACT INFO */}
-      <section className="mb-10 space-y-2">
-        <h2 className="text-2xl font-semibold">Contact Details</h2>
-        <p>📞 {config.phone}</p>
-        <p>📧 {config.email}</p>
-        {config.address && <p>📍 {config.address}</p>}
-      </section>
+      <form
+        onSubmit={handleSubmit}
+        className="flex flex-col gap-4 max-w-xl"
+      >
+        <input
+          name="firstName"
+          placeholder="First Name"
+          onChange={handleChange}
+          value={form.firstName}
+          className="border p-3 rounded-lg"
+        />
 
-      {/* FORM */}
-      <section>
-        <h2 className="text-2xl font-semibold mb-4">Send a Message</h2>
+        <input
+          name="lastName"
+          placeholder="Last Name"
+          onChange={handleChange}
+          value={form.lastName}
+          className="border p-3 rounded-lg"
+        />
 
-        <form
-          onSubmit={handleSubmit}
-          className="flex flex-col gap-4 max-w-xl"
+        <input
+          name="contact"
+          placeholder="Email or Phone"
+          onChange={handleChange}
+          value={form.contact}
+          className="border p-3 rounded-lg"
+        />
+
+        {config.showAddress && (
+          <input
+            name="address"
+            placeholder="Address (optional)"
+            onChange={handleChange}
+            value={form.address}
+            className="border p-3 rounded-lg"
+          />
+        )}
+
+        {config.showSize && (
+          <input
+            name="size"
+            placeholder="Size (optional)"
+            onChange={handleChange}
+            value={form.size}
+            className="border p-3 rounded-lg"
+          />
+        )}
+
+        <input
+          name="date"
+          placeholder="Date (optional)"
+          onChange={handleChange}
+          value={form.date}
+          className="border p-3 rounded-lg"
+        />
+
+        <textarea
+          name="message"
+          placeholder="Message"
+          onChange={handleChange}
+          value={form.message}
+          className="border p-3 rounded-lg h-32"
+        />
+
+        <button
+          type="submit"
+          className="bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition"
         >
-          <input
-            name="firstName"
-            placeholder="First Name"
-            onChange={handleChange}
-            value={form.firstName}
-            className="border p-3 rounded-lg"
-          />
+          Send Message
+        </button>
+      </form>
+    </section>
+  </div>
+</main>
+```
 
-          <input
-            name="lastName"
-            placeholder="Last Name"
-            onChange={handleChange}
-            value={form.lastName}
-            className="border p-3 rounded-lg"
-          />
-
-          <input
-            name="contact"
-            placeholder="Email or Phone"
-            onChange={handleChange}
-            value={form.contact}
-            className="border p-3 rounded-lg"
-          />
-
-          {config.showAddress && (
-            <input
-              name="address"
-              placeholder="Address (optional)"
-              onChange={handleChange}
-              value={form.address}
-              className="border p-3 rounded-lg"
-            />
-          )}
-
-          {config.showSize && (
-            <input
-              name="size"
-              placeholder="Size (optional)"
-              onChange={handleChange}
-              value={form.size}
-              className="border p-3 rounded-lg"
-            />
-          )}
-
-          <input
-            name="date"
-            placeholder="Date (optional)"
-            onChange={handleChange}
-            value={form.date}
-            className="border p-3 rounded-lg"
-          />
-
-          <textarea
-            name="message"
-            placeholder="Message"
-            onChange={handleChange}
-            value={form.message}
-            className="border p-3 rounded-lg h-32"
-          />
-
-          <button
-            type="submit"
-            className={`bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition`}
-          >
-            Send Message
-          </button>
-        </form>
-      </section>
-
-    </main>
-  );
+);
 }
