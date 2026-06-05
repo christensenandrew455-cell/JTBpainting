@@ -1,6 +1,5 @@
 import { Resend } from "resend";
-import emailConfig from "@/app/contact/emailConfig";
-
+import emailConfig from "../../contact/emailConfig";
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req) {
