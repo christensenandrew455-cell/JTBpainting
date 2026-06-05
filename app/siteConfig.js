@@ -1,7 +1,7 @@
 const siteConfig = {
 // Header
 showHeader: true,
-stickyHeader: false,
+stickyHeader: true,
 
 // Footer
 showFooter: true,
