@@ -75,11 +75,6 @@ export default function ContactPage() {
           <p>
             <strong>Email:</strong> {config.email}
           </p>
-
-          {config.address && (
-            <p>
-              <strong>Address:</strong> {config.address}
-            </p>
           )}
         </div>
 
