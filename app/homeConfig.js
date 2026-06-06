@@ -1,8 +1,8 @@
 const config = {
   // BUSINESS INFO
-  businessName: "YOUR BUSINESS NAME",
-  phone: "YOUR PHONE NUMBER",
-  email: "YOUR EMAIL",
+  businessName: "Bobs landwork",
+  phone: "(999)-999-9999",
+  email: "bob@email.com",
 
   // BRANDING
   logoUrl: "",
@@ -16,7 +16,7 @@ const config = {
   secondaryColor: "gray-200",
 
   // HERO
-  heroTitle: "YOUR BUSINESS NAME",
+  heroTitle: "Bobs landwork",
   heroSubtitle: "Professional Service You Can Trust",
 
   heroUseImage: true,
@@ -38,12 +38,7 @@ const config = {
 
   // SERVICE AREAS
   serviceAreas: [
-    "Town 1",
-    "Town 2",
-    "Town 3",
-    "Town 4",
-    "Town 5",
-    "Town 6",
+    "central mass",
   ],
 
   // MEDIA
@@ -74,7 +69,7 @@ const config = {
     },
   ],
 
-  googleReviewsLink: "",
+  googleReviewsLink: "hey man",
 };
 
 export default config;
