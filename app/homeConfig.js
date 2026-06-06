@@ -1,78 +1,82 @@
 const config = {
-// BUSINESS INFO
-businessName: "Bobs Landwork",
-phone: "(999)-999-9999",
-email: "[bob@email.com](mailto:bob@email.com)",
+  // BUSINESS INFO
+  businessName: "Bobs Landwork",
+  phone: "(999)-999-9999",
+  email: "[bob@email.com](mailto:bob@email.com)",
 
-// BRANDING
-logoUrl: "",
+  // BRANDING
+  logoUrl: "",
 
-// BUTTONS
-contactButtonText: "Contact Us",
+  // BUTTONS
+  contactButtonText: "Contact Us",
 
-// STYLE
-font: "font-sans",
-primaryColor: "blue-600",
-secondaryColor: "gray-200",
+  // STYLE
+  font: "font-sans",
+  primaryColor: "blue-600",
+  secondaryColor: "gray-200",
 
-// HERO
-heroTitle: "Bob's Landwork",
+  // HERO
+  heroTitle: "Bob's Landwork",
 
-heroSubtitle:
-"Reliable Land Clearing and Property Services Throughout Central Massachusetts",
+  heroSubtitle:
+    "Reliable Land Clearing and Property Services Throughout Central Massachusetts",
 
-heroUseImage: true,
+  heroUseImage: true,
 
-heroImage:
-"https://images.unsplash.com/photo-1504307651254-35680f356dfd",
+  heroImage:
+    "https://images.unsplash.com/photo-1504307651254-35680f356dfd",
 
-heroBackgroundColor: "bg-blue-600",
+  heroBackgroundColor: "bg-blue-600",
 
-// ABOUT
-companyStory:
-"Bob's Landwork provides professional land clearing, excavation, property cleanup, and site preparation services throughout Central Massachusetts. We take pride in delivering dependable work, honest communication, and quality results for every customer.",
+  // ABOUT
+  companyStory:
+    "Bob's Landwork provides professional land clearing, excavation, property cleanup, and site preparation services throughout Central Massachusetts. We take pride in delivering dependable work, honest communication, and quality results for every customer.",
 
-mission:
-"Our goal is to help property owners improve and maintain their land with safe, efficient, and affordable services.",
+  mission:
+    "Our goal is to help property owners improve and maintain their land with safe, efficient, and affordable services.",
 
-// WHY CHOOSE US
-whyChooseUs:
-"Experienced, dependable, fully committed to customer satisfaction, and focused on delivering quality results every time.",
+  // WHAT WE DO
+  whatWeDo:
+    "Bob's Landwork specializes in land clearing, excavation, grading, property cleanup, brush removal, site preparation, and related land management services. Whether you're preparing for construction, improving your property, or cleaning up overgrown areas, we provide reliable solutions tailored to your needs.",
 
-// SERVICE AREAS
-serviceAreas: [
-"Central Massachusetts",
-],
+  // WHY CHOOSE US
+  whyChooseUs:
+    "Experienced, dependable, fully committed to customer satisfaction, and focused on delivering quality results every time.",
 
-// MEDIA
-images: [
-"https://via.placeholder.com/400",
-"https://via.placeholder.com/400",
-"https://via.placeholder.com/400",
-],
+  // SERVICE AREAS
+  serviceAreas: [
+    "Central Massachusetts",
+  ],
 
-video: "",
+  // MEDIA
+  images: [
+    "https://via.placeholder.com/400",
+    "https://via.placeholder.com/400",
+    "https://via.placeholder.com/400",
+  ],
 
-// TESTIMONIALS
-testimonials: [
-{
-name: "John",
-stars: 5,
-review: "Amazing service!",
-},
-{
-name: "Sarah",
-stars: 5,
-review: "Highly recommend!",
-},
-{
-name: "Mike",
-stars: 4,
-review: "Great experience!",
-},
-],
+  video: "",
 
-googleReviewsLink: "",
+  // TESTIMONIALS
+  testimonials: [
+    {
+      name: "John",
+      stars: 5,
+      review: "Amazing service!",
+    },
+    {
+      name: "Sarah",
+      stars: 5,
+      review: "Highly recommend!",
+    },
+    {
+      name: "Mike",
+      stars: 4,
+      review: "Great experience!",
+    },
+  ],
+
+  googleReviewsLink: "",
 };
 
 export default config;
