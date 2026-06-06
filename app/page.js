@@ -47,20 +47,13 @@ export default function Home() {
             </div>
 
             {/* RIGHT */}
-            <div className="flex justify-end gap-3">
+            <div className="flex justify-end">
               <Link
                 href={siteConfig.contactPageRoute}
                 className="border border-gray-300 px-4 py-2 rounded-lg hover:bg-gray-100 transition"
               >
                 {config.contactButtonText}
               </Link>
-
-              <a
-                href={`tel:${config.phone}`}
-                className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
-              >
-                {config.callButtonText}
-              </a>
             </div>
           </div>
         </header>
