@@ -110,8 +110,14 @@ export default function Home() {
               </h3>
 
               <p>{config.companyStory}</p>
+            </div>
 
-              <p className="mt-3">{config.mission}</p>
+            <div>
+              <h3 className="text-2xl font-semibold mb-3">
+                Our Mission
+              </h3>
+
+              <p>{config.mission}</p>
             </div>
 
             <div>
