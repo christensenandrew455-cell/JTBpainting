@@ -21,7 +21,6 @@ export default function AboutPage() {
           `}
         >
           <div className="max-w-7xl mx-auto flex items-center justify-between">
-            {/* Logo & Business Name */}
             <div className="flex items-center gap-3">
               {config.showLogo && config.logoUrl && (
                 <img
@@ -38,7 +37,6 @@ export default function AboutPage() {
               </h1>
             </div>
 
-            {/* Navigation */}
             {config.showNavLinks && (
               <nav className="hidden md:flex items-center gap-6 ml-auto">
                 {config.headerLinks.map((link) => (
@@ -63,66 +61,47 @@ export default function AboutPage() {
         </header>
       )}
 
-      <div className="max-w-7xl mx-auto p-6 md:p-12">
+      <div className="max-w-6xl mx-auto p-6 md:p-12">
         {/* PAGE HEADER */}
-        <div className="text-center mb-20">
+        <div className="text-center mb-12">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
             {aboutConfig.pageTitle}
           </h1>
+
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Learn more about our company, our mission, and our commitment to delivering quality land services throughout Central Massachusetts.
+          </p>
         </div>
 
-        {/* ABOUT SECTIONS */}
-        <div className="space-y-12">
-          {aboutConfig.sections.map((section, index) => (
+        {/* HERO IMAGE */}
+        <div className="mb-16">
+          <img
+            src={aboutConfig.heroImage}
+            alt={aboutConfig.pageTitle}
+            className="w-full h-[500px] object-cover rounded-3xl shadow-xl"
+          />
+        </div>
+
+        {/* CONTENT CARDS */}
+        <div className="space-y-8">
+          {aboutConfig.sections.map((section) => (
             <section
               key={section.title}
-              className="
-                grid md:grid-cols-2
-                gap-10
-                items-center
-                bg-white
-                p-8
-                md:p-12
-                rounded-3xl
-                shadow-lg
-                border
-              "
+              className="bg-white p-8 md:p-10 rounded-3xl shadow-lg border"
             >
-              <div
-                className={
-                  index % 2 === 1
-                    ? "md:order-2"
-                    : ""
-                }
-              >
-                <div className="inline-block bg-blue-600 text-white px-5 py-2 rounded-lg mb-6 font-semibold">
-                  {section.title}
-                </div>
+              <h2 className="text-3xl font-bold mb-4">
+                {section.title}
+              </h2>
 
-                <p className="text-lg leading-relaxed text-gray-700">
-                  {section.content}
-                </p>
-              </div>
-
-              <div
-                className={
-                  index % 2 === 1
-                    ? "md:order-1"
-                    : ""
-                }
-              >
-                <img
-                  src={section.image}
-                  alt={section.title}
-                  className="w-full rounded-3xl shadow-lg"
-                />
-              </div>
+              <p className="text-lg leading-relaxed text-gray-700">
+                {section.content}
+              </p>
             </section>
           ))}
         </div>
 
         {/* CTA */}
-        <section className="text-center mt-20">
+        <section className="text-center mt-16">
           <Link
             href={siteConfig.contactPageRoute}
             className="inline-block bg-blue-600 text-white px-10 py-5 rounded-xl text-lg font-semibold hover:bg-blue-700 transition"
@@ -145,7 +124,6 @@ export default function AboutPage() {
           `}
         >
           <p>{config.email}</p>
-
           <p>{config.phone}</p>
 
           <Link
