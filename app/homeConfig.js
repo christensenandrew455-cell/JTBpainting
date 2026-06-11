@@ -12,12 +12,11 @@ const config = {
   contactButtonText: "Contact Us",
 
   // HEADER CONFIGURATION
-  showNavLinks: true, // Toggle to show or hide the Home, Services, About Us, Contact buttons
+  showNavLinks: false, // Toggle to show or hide the Home, Services, About Us, Contact buttons
   headerLinks: [
     { name: "Home", href: "/" },
     { name: "Services", href: "/services" },
     { name: "About Us", href: "/about" },
-    { name: "Contact Us", href: "/contact" },
   ],
   headerBackground: "bg-white",
   headerBorder: "border-gray-200",
