@@ -1,5 +1,3 @@
-app/homeConfig.js
-
 const config = {
 // BUSINESS INFO
 businessName: "JTB Painting",
