@@ -1,92 +1,109 @@
+app/homeConfig.js
+
 const config = {
-  // BUSINESS INFO
-  businessName: "Jtb painting",
-  phone: "",
-  email: "Taborpainting508@gmail.com",
+// BUSINESS INFO
+businessName: "JTB Painting",
+phone: "",
+email: "[Taborpainting508@gmail.com](mailto:Taborpainting508@gmail.com)",
 
-  // BRANDING
-  logoUrl: "", // Provide your logo URL here
-  showLogo: true,
+// LOGO
+logoUrl: "",
+showLogo: true,
 
-  // BUTTONS
-  contactButtonText: "Contact Us",
+// BUTTONS
+contactButtonText: "Get A Free Estimate",
 
-  // HEADER CONFIGURATION
-  showNavLinks: false, // Toggle to show or hide the Home, Services, About Us, Contact buttons
-  headerLinks: [
-    { name: "Home", href: "/" },
-    { name: "Services", href: "/services" },
-    { name: "About Us", href: "/about" },
-  ],
-  headerBackground: "bg-white",
-  headerBorder: "border-gray-200",
-  headerTextColor: "text-gray-800",
+// THEME
+theme: {
+pageBg: "bg-black",
+pageText: "text-white",
 
-  headerButtonBg: "bg-blue-600",
-  headerButtonHover: "hover:bg-blue-700",
-  headerButtonText: "text-white",
+```
+headerBg: "bg-black",
+headerBorder: "border-blue-500/20",
+headerText: "text-white",
 
-  // STYLE
-  font: "font-sans",
-  primaryColor: "blue-600",
-  secondaryColor: "gray-200",
+heroBg:
+  "bg-gradient-to-br from-black via-gray-950 to-blue-950",
 
-  // HERO SECTION
-  heroTitle: "JTB painting",
-  heroSubtitle:
-    "Precision in Every Stroke. Excellence in Every Project.",
-  heroUseImage: false,
-  heroImage:
-    "",
-  heroBackgroundColor: "bg-blue-600",
+sectionBg:
+  "bg-gray-900 border border-blue-500/20 rounded-3xl shadow-2xl",
 
-  // ABOUT SECTION
-  companyStory:
-    "Founded by Jason Beirne after working with Student Painters, our company was built on hard work, quality craftsmanship, and a commitment to delivering outstanding results",
+cardBg:
+  "bg-black border border-blue-500/20 rounded-2xl shadow-lg hover:border-blue-500 transition-all",
 
-  mission:
-    "To provide professional, high-quality painting services with excellent workmanship, reliable communication, and customer satisfaction on every project.",
+testimonialBg:
+  "bg-black border border-blue-500/20 rounded-2xl",
 
-  // WHAT WE DO
-  whatWeDo:
-    "JTB Painting specializes in delivering high-quality painting services with precision strokes, attention to detail, and lasting results that enhance the beauty of every property",
+button:
+  "bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition",
 
-  // WHY CHOOSE US
-  whyChooseUs:
-    "We deliver exceptional painting results, complete projects on time, and treat every property with the care and attention it deserves.",
+accentText: "text-blue-400",
+```
 
-  // SERVICE AREAS
-  serviceAreas: ["all over Massachusetts"],
+},
 
-  // MEDIA
-  images: [
-    "https://via.placeholder.com/400",
-    "https://via.placeholder.com/400",
-    "https://via.placeholder.com/400",
-  ],
+// HEADER
+showNavLinks: false,
+headerLinks: [
+{ name: "Home", href: "/" },
+{ name: "Services", href: "/services" },
+{ name: "About Us", href: "/about" },
+],
 
-  video: "",
+// STYLE
+font: "font-sans",
 
-  // TESTIMONIALS
-  testimonials: [
-    {
-      name: "Chris",
-      stars: 5,
-      review: "The room looks brand new!",
-    },
-    {
-      name: "Mike",
-      stars: 5,
-      review: "these guys know what they are doing!",
-    },
-    {
-      name: "Sarah",
-      stars: 4,
-      review: "Jason and his team were so resepctful and im gonna refer you guys for sure!",
-    },
-  ],
+// HERO
+heroTitle: "JTB Painting",
+heroSubtitle:
+"Precision in Every Stroke. Excellence in Every Project.",
+heroUseImage: false,
+heroImage: "",
 
-  googleReviewsLink: "",
+// ABOUT
+companyStory:
+"Founded by Jason Beirne after working with Student Painters, JTB Painting was built on hard work, quality craftsmanship, and a commitment to delivering outstanding results.",
+
+mission:
+"To provide professional, high-quality painting services with excellent workmanship, reliable communication, and customer satisfaction on every project.",
+
+whatWeDo:
+"JTB Painting specializes in delivering high-quality painting services with precision strokes, attention to detail, and lasting results that enhance the beauty of every property.",
+
+whyChooseUs:
+"We deliver exceptional painting results, complete projects on time, and treat every property with the care and attention it deserves.",
+
+serviceAreas: ["All of Massachusetts"],
+
+images: [
+"https://via.placeholder.com/600x400",
+"https://via.placeholder.com/600x400",
+"https://via.placeholder.com/600x400",
+],
+
+video: "",
+
+testimonials: [
+{
+name: "Chris",
+stars: 5,
+review: "The room looks brand new!",
+},
+{
+name: "Mike",
+stars: 5,
+review: "These guys know what they are doing!",
+},
+{
+name: "Sarah",
+stars: 5,
+review:
+"Jason and his team were respectful, professional, and did amazing work.",
+},
+],
+
+googleReviewsLink: "",
 };
 
 export default config;
