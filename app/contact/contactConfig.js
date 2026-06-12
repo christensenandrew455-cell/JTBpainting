@@ -3,7 +3,7 @@ const config = {
   subtitle:
     "Send us a message and we'll get back to you as soon as possible.",
 
-  phone: "YOUR PHONE NUMBER",
+  phone: "(774)-245-3383",
   email: "Taborpainting508@gmail.com",
 
   primaryColor: "blue-600",
